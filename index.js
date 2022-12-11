@@ -3,6 +3,7 @@ const express=require("express");
 // const bcrypt=require("bcrypt")
 const app=express();
 app.use(express.json())
+app.use(cors())
 const {connection,User}=require("./db.js")
 const {Note}=require("./notes.js")
 const {Noterouter}=require("./notes.router.js")
