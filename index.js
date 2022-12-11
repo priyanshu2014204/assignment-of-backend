@@ -4,8 +4,10 @@ const cors=require("cors")
 const app=express();
 
 app.use(express.json())
-// app.use(cors())
-app.options('*', cors())
+app.use(cors({
+  origin:"*"
+}))
+// app.options('*', cors())
 const {connection,User}=require("./db.js")
 const {Note}=require("./notes.js")
 const {Noterouter}=require("./notes.router.js")
